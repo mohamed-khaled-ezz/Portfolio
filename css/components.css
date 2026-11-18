@@ -18,6 +18,7 @@
 .btn.outline{border-color:var(--cyan);color:var(--cyan)}
 .btn.live{background:transparent;border-color:var(--nc,var(--purple));color:var(--nc,var(--purple))}
 .btn[aria-disabled=true]{cursor:not-allowed;border-style:dashed;background:transparent;color:inherit;opacity:.75}.btn[aria-disabled=true] small{display:block}
+.btn.cv-btn{border-color:var(--amber);color:var(--amber);background:#FFB02012}
 @media (hover:hover){.btn:not([aria-disabled=true]):hover{transform:translate(-3px,-3px);box-shadow:0 0 24px currentColor}.btn.primary:not([aria-disabled=true]):hover{box-shadow:0 0 30px var(--red)}}
 .btn:not([aria-disabled=true]):active{transform:translate(1px,1px)}
 /* ===== PAPER FORM ===== */

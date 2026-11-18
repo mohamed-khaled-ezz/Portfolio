@@ -15,7 +15,7 @@
 
     /* 1 — loader: name fills with spray, curtain lifts, hero lands */
     const ldf = $("#ldf"), ldn = $("#ldn"), p = { v: 0 };
-    gsap.set(".neon-art .nt path, .doodle .nt path, .uline .nt path", { strokeDashoffset: 1 });
+    gsap.set(".neon-art .nt path, .doodle .nt path", { strokeDashoffset: 1 });
     gsap.set(".hero .ln > span", { yPercent: 108 });
     gsap.set(".slab", { scale: 1.4, autoAlpha: 0 });
     gsap.set(".neon-art circle", { scale: 0, transformOrigin: "center" });
@@ -36,12 +36,11 @@
     $$(".h2,.mega").forEach(h => gsap.from($$(".mask>span", h), { yPercent: 110, stagger: .12, duration: 1, ease: "expo.out", scrollTrigger: once(h, "top 88%") }));
     $$(".kicker").forEach(k => gsap.from(k, { x: -30, autoAlpha: 0, duration: .7, scrollTrigger: once(k, "top 92%") }));
 
-    /* 3 — about: statement rises, marker underline draws, stamp slams down */
+    /* 3 — about: profile copy and education details reveal */
     gsap.from(".statement", { y: 40, autoAlpha: 0, duration: .9, ease: "power3.out", scrollTrigger: once(".statement") });
-    gsap.to(".uline .nt path", { strokeDashoffset: 0, duration: 1, ease: "power2.out", scrollTrigger: once(".statement", "top 70%") });
     gsap.to(".doodle .nt path", { strokeDashoffset: 0, duration: 1.4, stagger: .08, scrollTrigger: once(".contact", "top 60%") });
     gsap.from(".about-p,.about-facts li", { y: 26, autoAlpha: 0, stagger: .1, duration: .8, scrollTrigger: once(".about-p") });
-    gsap.from(".stamp", { scale: 1.5, rotate: 12, autoAlpha: 0, duration: .7, ease: "power4.in", clearProps: "scale,rotate", scrollTrigger: once(".stamp", "top 85%") });
+    gsap.from(".stamp", { y: 24, autoAlpha: 0, duration: .7, ease: "power3.out", clearProps: "transform", scrollTrigger: once(".stamp", "top 85%") });
 
     /* 4 — skills: elements stamp in group by group */
     $$(".grp").forEach(g => {

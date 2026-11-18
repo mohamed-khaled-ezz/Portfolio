@@ -6,6 +6,7 @@ A responsive personal portfolio for Mohamed Khaled, a Junior Flutter Developer b
 
 - Responsive layout with desktop and mobile navigation
 - Project details dialog with configurable GitHub, demo, and screenshot links
+- Downloadable CV/PDF button in the hero section
 - Contact form that opens a prefilled message in the visitor's email app
 - Animated page transitions and scroll effects, with reduced-motion support
 - Works without a build step or package installation

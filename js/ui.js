@@ -4,6 +4,10 @@
   const $ = (s, c = document) => c.querySelector(s), $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const body = document.body, esc = s => String(s).replace(/[&<>"]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]));
   $("#yr").textContent = new Date().getFullYear();
+  const cv = $("#download-cv");
+  if (cv && window.CV_URL) {
+    cv.href = window.CV_URL;
+  }
   const clock = $("#clock"), tick = () => { clock.textContent = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Africa/Cairo" }).format(new Date()); };
   tick(); setInterval(tick, 30000);
 
